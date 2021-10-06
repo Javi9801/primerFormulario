@@ -37,6 +37,10 @@ if(isset($_GET["mul"])){
 if(isset($_GET["error"])){
     echo $_GET["error"];
 }
+
+if(isset($_GET["muestra"])){
+    echo $_GET["muestra"];
+}
  ?>
 
 </body>
