@@ -39,7 +39,7 @@ function validar($num1, $num2){
 
     if(is_numeric($num1)==false){
         $errores["numero1"] = "Error, primer parametro no numerico";
-
+    }
     if(is_numeric($num2)==false){
         $errores["numero2"] = "Error, segundo parametro no numerico";
     }
