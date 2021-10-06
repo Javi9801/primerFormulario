@@ -21,6 +21,7 @@ if(count($errores==0)){
         }
     }
 } else{
+    $muestra = "";
     foreach($errores as $v){
         $muestra = $errores[$v]."/";
     }
@@ -49,10 +50,5 @@ function validar($num1, $num2){
         $errores["numero2"] = "Error, segundo parametro nulo";
     }        
 
-    }
-
     return $errores;
-    
-
 }
-?>
