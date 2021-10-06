@@ -38,8 +38,8 @@ if(isset($_GET["error"])){
     echo $_GET["error"];
 }
 
-if(isset($_GET["muestra"])){
-    echo $_GET["muestra"];
+if(isset($_GET["valida"])){
+    echo $_GET["valida"];
 }
  ?>
 

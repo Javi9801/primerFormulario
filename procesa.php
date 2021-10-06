@@ -1,7 +1,8 @@
 <?php
 $errores = [];
 $errores = validar($_POST["numero1"], $_POST["numero2"]);
-if(count($errores==0)){
+if(count($errores)==0){
+
     if(isset($_POST["sumar"])){
         $operacion = $_POST["numero1"] + ($_POST["numero2"]);
         header('Location: formulario.php?suma='.$operacion);
@@ -23,9 +24,10 @@ if(count($errores==0)){
 } else{
     $muestra = "";
     foreach($errores as $v){
-        $muestra = $errores[$v]."/";
+        $muestra = $v;
     }
-    header('Location: formulario.php?valida='.$muestra);
+    var_dump($errores);
+    header("Location: formulario.php?valida=$muestra");
 } 
 
 function validaFormulario($num1, $num2){
@@ -33,6 +35,8 @@ function validaFormulario($num1, $num2){
         return true;
     }
 }
+
+
 
 function validar($num1, $num2){
     $errores = [];
