@@ -41,18 +41,18 @@ function validaFormulario($num1, $num2){
 function validar($num1, $num2){
     $errores = [];
 
-    if(is_numeric($num1)==false){
+    if($num1=="")==false){
+        $errores["numero1"] = "Error, primer parametro nulo";
+    } else if(is_numeric($num1)){
         $errores["numero1"] = "Error, primer parametro no numerico";
     }
-    if(is_numeric($num2)==false){
-        $errores["numero2"] = "Error, segundo parametro no numerico";
+
+    if($num2=="")==false){
+        $errores["numero1"] = "Error, segundo parametro nulo";
+    } else if(is_numeric($num2)){
+        $errores["numero1"] = "Error, segundo parametro no numerico";
     }
-    if($num1==""){
-        $errores["numero1"] = "Error, primer parametro nulo";
-    }
-    if($num2==""){
-        $errores["numero2"] = "Error, segundo parametro nulo";
-    }        
+  
 
     return $errores;
 }
