@@ -48,9 +48,9 @@ function validar($num1, $num2){
     }
 
     if($num2=="")==false){
-        $errores["numero1"] = "Error, segundo parametro nulo";
+        $errores["numero2"] = "Error, segundo parametro nulo";
     } else if(is_numeric($num2)){
-        $errores["numero1"] = "Error, segundo parametro no numerico";
+        $errores["numero2"] = "Error, segundo parametro no numerico";
     }
   
 
